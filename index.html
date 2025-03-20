@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Seleziona una persona da ringraziare! 🦖</h1>
-
+    <h1>Chi vuoi ringraziare? 🦖🫏</h1>
+    
     <div id="buttons"></div>
 
     <div class="animation-container">
-        <img src="dino.webp" class="dino" alt="Dinosauro che corre">
-        <img src="gif-asino-che-raglia.gif" class="asino" alt="Asino divertente">
+        <img src="dino.gif" class="dino" alt="Dinosauro che corre">
+        <img src="asino.gif" class="asino" alt="Asino divertente">
     </div>
 
     <script>
@@ -23,7 +23,12 @@
         people.forEach(name => {
             const button = document.createElement("button");
             button.textContent = name;
-            button.onclick = () => window.location.href = `thankyou.html?name=${name}`;
+            button.onclick = () => {
+                document.body.classList.add("fade-out"); 
+                setTimeout(() => {
+                    window.location.href = `thankyou.html?name=${name}`;
+                }, 500); 
+            };
             buttonsDiv.appendChild(button);
         });
     </script>
