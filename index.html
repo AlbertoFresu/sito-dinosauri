@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosauri Ringraziamenti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Seleziona una persona da ringraziare! 🦖</h1>
+    <div id="buttons"></div>
+
+    <script>
+        const people = ["Alice", "Bob", "Charlie", "Diana"];
+        const buttonsDiv = document.getElementById("buttons");
+
+        people.forEach(name => {
+            const button = document.createElement("button");
+            button.textContent = name;
+            button.onclick = () => window.location.href = `thankyou.html?name=${name}`;
+            buttonsDiv.appendChild(button);
+        });
+    </script>
+</body>
+</html>
