@@ -1,13 +1,18 @@
+/* Generale */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
-    background-color: #fef5c3;
+    background: linear-gradient(to bottom, #fef5c3, #ffcc80);
+    transition: background 0.5s ease-in-out;
 }
 
+/* Titolo */
 h1 {
     color: #4a4e69;
+    font-size: 2em;
 }
 
+/* Bottoni */
 button {
     background-color: #ffb703;
     border: none;
@@ -16,7 +21,7 @@ button {
     cursor: pointer;
     border-radius: 15px;
     margin: 10px;
-    transition: transform 0.2s;
+    transition: transform 0.2s, background-color 0.3s;
 }
 
 button:hover {
@@ -24,6 +29,7 @@ button:hover {
     transform: scale(1.1);
 }
 
+/* Animazione dinosauro e asino */
 .animation-container {
     position: relative;
     width: 100%;
@@ -53,5 +59,34 @@ button:hover {
     }
     to {
         transform: translateX(100vw);
+    }
+}
+
+/* Effetto di transizione tra le pagine */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+    opacity: 1;
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }

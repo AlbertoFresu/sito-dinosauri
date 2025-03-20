@@ -6,7 +6,7 @@
     <title>Grazie!</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="fade-in">
     <h1 id="message"></h1>
 
     <div class="animation-container">
@@ -14,12 +14,20 @@
         <img src="asino.gif" class="asino" alt="Asino divertente">
     </div>
 
-    <a href="index.html"><button>Torna Indietro</button></a>
+    <a href="index.html"><button id="backButton">Torna Indietro</button></a>
 
     <script>
         const params = new URLSearchParams(window.location.search);
         const name = params.get("name");
         document.getElementById("message").textContent = `Grazie, ${name}! Sei il miglior dinosauro di sempre! 🦕`;
+
+        document.getElementById("backButton").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.body.classList.add("fade-out"); 
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 500);
+        });
     </script>
 </body>
 </html>
