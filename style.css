@@ -65,18 +65,39 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Contenitore del titolo con box di sfondo opaco */
-h1 {
-    position: relative;
-    display: inline-block;
-    padding: 20px 30px; /* Spazio intorno al testo */
-    background: rgba(0, 0, 0, 0.7); /* Colore di sfondo scuro ma trasparente */
-    color: #ffdd57;
-    font-size: 3em;
-    margin-bottom: 20px;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Ombra per contrasto */
-    border-radius: 15px; /* Angoli arrotondati */
+/* Stile per il testo di ringraziamento personalizzato */
+.message-container p {
+    font-size: 1.5em;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif; /* Font pulito e moderno */
+    color: #4a4a4a; /* Colore testo scuro */
 }
+
+/* Titolo elegante per il messaggio di ringraziamento */
+h1 {
+    font-size: 3.5em; /* Aumentato per maggiore visibilità */
+    color: #ffdd57; /* Colore dorato */
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7); /* Ombra per contrasto delicato */
+    font-family: 'Georgia', serif; /* Font elegante */
+    letter-spacing: 2px; /* Distanza tra le lettere */
+}
+
+
+/* Contenitore del messaggio di ringraziamento personalizzato */
+.thank-you-message {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9); /* Sfondo trasparente */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Ombra per profondità */
+    max-width: 80%;
+    margin: 0 auto;
+    color: #333; /* Colore testo scuro per buona leggibilità */
+    font-size: 1.5em;
+}
+
 
 /* Testo del messaggio */
 p {
@@ -85,7 +106,7 @@ p {
     margin-bottom: 20px;
 }
 
-/* Pulsante indietro */
+/* Pulsante di ritorno con un aspetto elegante */
 #backButton {
     background-color: #ff6200;
     color: white;
@@ -97,9 +118,11 @@ p {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    text-transform: uppercase; /* Aggiunge un tocco elegante */
 }
 
-/* Effetto hover */
+/* Effetto hover sul pulsante */
 #backButton:hover {
     background-color: #fb8500;
     transform: scale(1.1);
