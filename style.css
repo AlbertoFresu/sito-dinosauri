@@ -65,12 +65,17 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Titolo */
+/* Contenitore del titolo con box di sfondo opaco */
 h1 {
+    position: relative;
+    display: inline-block;
+    padding: 20px 30px; /* Spazio intorno al testo */
+    background: rgba(0, 0, 0, 0.7); /* Colore di sfondo scuro ma trasparente */
     color: #ffdd57;
-    font-size: 3em; /* Aumentato per miglior visibilità */
+    font-size: 3em;
     margin-bottom: 20px;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Ombra per contrasto */
+    border-radius: 15px; /* Angoli arrotondati */
 }
 
 /* Testo del messaggio */
