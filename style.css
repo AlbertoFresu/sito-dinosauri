@@ -8,7 +8,7 @@ body {
     transition: background 0.5s ease-in-out;
 }
 
-/* Sovrapposizione per migliorare leggibilità */
+/* Sovrapposizione per migliorare la leggibilità (senza sfocatura) */
 .overlay {
     position: fixed;
     top: 0;
@@ -16,7 +16,6 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6); /* Oscuramento leggero */
-    backdrop-filter: blur(5px); /* Effetto sfocato */
 }
 
 /* Contenitore dei bottoni */
