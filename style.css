@@ -92,6 +92,15 @@ h1 {
     letter-spacing: 2px;
 }
 
+h1 {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5); /* Sfondo nero semi-trasparente */
+    color: white; /* Testo bianco per contrasto */
+    border-radius: 8px; /* Angoli arrotondati */
+}
+
 /* Pulsante di ritorno */
 #backButton {
     background-color: #ff6200;
