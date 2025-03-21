@@ -2,26 +2,41 @@
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
-    background: linear-gradient(to bottom, #fef5c3, #ffcc80);
+    background: url('background-dino-laurea.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     transition: background 0.5s ease-in-out;
 }
 
 /* Titolo */
 h1 {
-    color: #4a4e69;
-    font-size: 2em;
+    color: #ffdd57;
+    font-size: 2.5em;
+    margin-top: 20px;
 }
 
 /* Bottoni */
-button {
-    background-color: #ffb703;
-    border: none;
-    padding: 15px 25px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 15px;
-    margin: 10px;
-    transition: transform 0.2s, background-color 0.3s;
+#buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 300px; /* Imposta un'altezza massima */
+    overflow-y: auto; /* Abilita lo scroll verticale se necessario */
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Sfondo leggermente trasparente */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Miglioramento per mobile */
+@media (max-width: 600px) {
+    #buttons {
+        max-height: 50vh; /* Occupa metà dello schermo su dispositivi piccoli */
+        width: 90%;
+    }
 }
 
 button:hover {
@@ -40,7 +55,7 @@ button:hover {
 
 /* Dinosauro e Asino */
 .dino, .asino {
-    width: 200px; /* Dimensioni aumentate */
+    width: 220px; /* Dimensioni aumentate */
     height: auto;
 }
 
