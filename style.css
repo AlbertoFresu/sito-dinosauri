@@ -11,7 +11,7 @@ body {
 
 /* Sovrapposizione per migliorare leggibilità - solo per index.html */
 body.index-page .overlay {
-    backdrop-filter: blur(2px); /* Ridotto l'effetto di sfocatura per la pagina index */
+    backdrop-filter: blur(1px); /* Ridotto l'effetto di sfocatura per la pagina index */
 }
 
 /* Sovrapposizione per migliorare leggibilità */
