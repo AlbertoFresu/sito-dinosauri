@@ -5,12 +5,8 @@ body {
     background: url('background-dino-laurea.png') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     transition: background 0.5s ease-in-out;
 }
-
-
-
 
 /* Sovrapposizione per migliorare leggibilità */
 .overlay {
