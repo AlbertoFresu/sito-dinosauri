@@ -11,7 +11,7 @@
 
     <div class="overlay"></div> <!-- Sfondo scuro per leggibilità -->
     
-    <div class="message-container">
+    <div class="message-container opaque-box"> <!-- Aggiunto classe per opacità -->
         <h2>Scegli il tuo nome:</h2>
         <div id="buttons"></div>
     </div>
@@ -27,14 +27,14 @@
             "Marco", "Giulia", "Francesco", "Valentina",
             "Giorgio", "Alessandra", "Marta", "Simone",
             "Davide", "Elena", "Stefano", "Lucia"
-        ]; // Più nomi per test
+        ]; 
 
         const buttonsDiv = document.getElementById("buttons");
 
         people.forEach(name => {
             const button = document.createElement("button");
             button.textContent = name;
-            button.classList.add("thank-button"); // Aggiunto per stile
+            button.classList.add("thank-button");
             button.onclick = () => {
                 document.body.classList.add("fade-out"); 
                 setTimeout(() => {
