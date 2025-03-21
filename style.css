@@ -9,10 +9,8 @@ body {
     transition: background 0.5s ease-in-out;
 }
 
-/* Sovrapposizione per migliorare leggibilità - solo per index.html */
-body.index-page .overlay {
-    backdrop-filter: blur(1px); /* Ridotto l'effetto di sfocatura per la pagina index */
-}
+
+
 
 /* Sovrapposizione per migliorare leggibilità */
 .overlay {
@@ -75,8 +73,9 @@ body.index-page .overlay {
 /* Titolo */
 h1 {
     color: #ffdd57;
-    font-size: 2.2em;
+    font-size: 3em; /* Aumentato per miglior visibilità */
     margin-bottom: 20px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Ombra per contrasto */
 }
 
 /* Testo del messaggio */
@@ -106,6 +105,26 @@ p {
     transform: scale(1.1);
 }
 
+/* Animazione delle immagini */
+.animation-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Distanza tra le immagini */
+    margin-top: 30px;
+    margin-bottom: 20px; /* Distanza inferiore */
+}
+
+/* GIF */
+.dino, .asino {
+    max-width: 250px; /* Limita la dimensione */
+    max-height: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dino:hover, .asino:hover {
+    transform: scale(1.2); /* Leggero ingrandimento al passaggio del mouse */
+}
+
 /* Mobile */
 @media (max-width: 600px) {
     #buttons {
@@ -119,15 +138,35 @@ p {
     }
 }
 
+
 /* Adattamento per dispositivi mobili */
 @media (max-width: 600px) {
+    h1 {
+        font-size: 2.2em; /* Ridotto ma ancora ben visibile */
+    }
+
+    .animation-container {
+        flex-direction: column; /* Le immagini saranno in colonna */
+    }
+
+    .dino, .asino {
+        max-width: 200px; /* Più piccole su dispositivi mobili */
+        max-height: 200px;
+    }
+
+    #buttons {
+        max-width: 95%;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive bottoni */
+    }
+
+    .thank-button {
+        font-size: 1em;
+        padding: 10px 12px;
+    }
+
     .message-container {
         max-width: 95%;
         padding: 15px;
-    }
-
-    h1 {
-        font-size: 1.8em;
     }
 
     p {
