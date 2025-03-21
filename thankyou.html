@@ -7,23 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="fade-in">
-    <h1 id="message"></h1>
+    <div class="overlay"></div> <!-- Sfondo migliorato per leggibilità -->
+    
+    <div class="message-container">
+        <h1 id="message"></h1>
+        <p id="personalMessage"></p>
 
-    <div class="animation-container">
-        <img src="goofy-stupid.gif" class="dino" alt="Dinosauro che corre">
-        <img src="asino.gif" class="asino" alt="Asino divertente">
+        <button id="backButton">Torna Indietro</button>
     </div>
 
-    <a href="index.html"><button id="backButton">Torna Indietro</button></a>
-
     <script>
-        // Dizionario con messaggi personalizzati
+        // Messaggi personalizzati
         const messages = {
             "Sonia": "Grazie Sonia! Sei stata una guida incredibile in questo viaggio. 🎓❤️",
             "Famiglia": "Alla mia famiglia, il mio sostegno più grande. Senza di voi, nulla sarebbe stato possibile! ❤️",
             "Antonio": "Antonio, grazie per i tuoi consigli e il tuo supporto costante! 🚀",
             "Fabrizio": "Fabrizio, il miglior compagno di avventure accademiche! 🎓🔥",
-            // Puoi aggiungere altre persone qui...
+            // Aggiungi altre persone qui...
         };
 
         // Ottieni il parametro "name" dall'URL
@@ -31,10 +31,8 @@
         const name = params.get("name");
 
         // Imposta il messaggio personalizzato o uno generico se il nome non è nella lista
-        const message = messages[name] || `Grazie, ${name}! Sei il miglior dinosauro di sempre! 🦕`;
-
-        // Mostra il messaggio nella pagina
-        document.getElementById("message").textContent = message;
+        document.getElementById("message").textContent = `Grazie, ${name}!`;
+        document.getElementById("personalMessage").textContent = messages[name] || "Grazie per tutto! Sei una persona speciale. 💖";
 
         // Effetto di transizione per il pulsante "Torna Indietro"
         document.getElementById("backButton").addEventListener("click", function(event) {
