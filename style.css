@@ -9,6 +9,11 @@ body {
     transition: background 0.5s ease-in-out;
 }
 
+/* Sovrapposizione per migliorare leggibilità - solo per index.html */
+body.index-page .overlay {
+    backdrop-filter: blur(2px); /* Ridotto l'effetto di sfocatura per la pagina index */
+}
+
 /* Sovrapposizione per migliorare leggibilità */
 .overlay {
     position: fixed;
