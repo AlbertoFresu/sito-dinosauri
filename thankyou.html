@@ -19,16 +19,17 @@
     <script>
         const messages = {
             "Sonia": "Grazie, grazie e ancora grazie.\nIl tuo sostegno è ciò che mi ha portato fino a questo giorno, il tuo abbraccio era li ad aspettarmi in qualsiasi momento, e il tuo consiglio mi ha permesso di non mollare nei momenti più difficili.\nNon basterebbero nemmeno mille parole per ringraziarti davvero e farti capire quanto sia stato fondamentale averti al mio fianco in questo percorso.\nEppure eccoci qua. Siamo arrivati, ce l'abbiamo fatta! Se è stato possibile, è anche merito tuo.\nAh, dimenticavo: ti amo. Sei il mio punto di riferimento.",
-            "Famiglia": "Alla mia famiglia, il mio sostegno più grande.\nSenza di voi, nulla sarebbe stato possibile.\nA Marci: mi hai sempre sostenuto, anche quando ero in ansia o triste per gli esami. Dicevi sempre:\";Eeee dai, già si rifà, e la prossima volta andrà meglio!\";. Grazie per esserci sempre stato.\nA Babbo: con il tuo coraggio e la tua tenacia, mi hai spinto oltre ogni ostacolo, dandomi la carica anche nei momenti peggiori. Se devo la mia laurea a qualcuno, quello sei tu. Ricorda sempre \"uno alla volta...\".\nA Mamma: mi hai fatto vedere il mondo con più leggerezza. Ogni tua frase, mai banale, mi ha sempre dato da pensare. Ti voglio un bene enorme e ti ringrazio, perché questo traguardo è stato possibile anche grazie a te.\nA Nino: la tua positività è contagiosa, dico sul serio. A volte hai creduto in me più di chiunque altro. Purtroppo siamo lontani, ma se mai dovessi leggere questo, sappi che ti ringrazio dal profondo del mio cuore, fratello.",
-            "Antonio": "Antonio, grazie per i tuoi consigli e il tuo supporto costante! 🚀",
-            "Fabrizio": "Fabrizio, il miglior compagno di avventure accademiche! 🎓🔥",
+            "Famiglia": "Alla mia famiglia, il mio sostegno più grande.\nSenza di voi, nulla sarebbe stato possibile.\nA Marci: mi hai sempre sostenuto, anche quando ero in ansia o triste per gli esami. Dicevi sempre:\";Eeee dai, già si rifà, e la prossima volta andrà meglio!\";. Grazie per esserci sempre stata.\nA Babbo: con il tuo coraggio e la tua tenacia, mi hai spinto oltre ogni ostacolo, dandomi la carica anche nei momenti peggiori. Se devo la mia laurea a qualcuno, quello sei tu. Ricorda sempre \"uno alla volta...\".\nA Mamma: mi hai fatto vedere il mondo con più leggerezza. Ogni tua frase, mai banale, mi ha sempre dato da pensare. Ti voglio un bene enorme e ti ringrazio, perché questo traguardo è stato possibile anche grazie a te.\nA Nino: la tua positività è contagiosa, dico sul serio. A volte hai creduto in me più di chiunque altro. Purtroppo siamo lontani, ma se mai dovessi leggere questo, sappi che ti ringrazio dal profondo del mio cuore, fratello.",
+            "Antonio": "Antonio, questo percorso con te al mio fianco al Fibonacci è volato, vuoi qualche verso, vuoi qualche chiacchierata seria, mi hai accompagnato sino alla fine di questo bellissimo percorso.\n Sei un amico ed una persona speciale per la tua spensieratezza e per il modo in cui mi fai sempre vedeere le cose.\m Grazie e ti voglio bene",
+            "Fabrizio": "Fabrizio, sei stato un coinquilino poi diventato un vero amico. La tua generosità, la tua compagnia ed il tuo incredibile senso dell'umorismo, mi hanno accompagnato in questo bellissimo traguardo.\n Ti ringrazio infinitamente e ti voglio un mondo di bene.\nTe che c'hai la possibilità",
         };
 
         const params = new URLSearchParams(window.location.search);
         const name = params.get("name");
 
         document.getElementById("message").textContent = `Grazie, ${name}!`;
-        document.getElementById("personalMessage").textContent = messages[name] || "Grazie per tutto! Sei una persona speciale. 💖";
+        //document.getElementById("personalMessage").textContent = messages[name] || "Grazie per tutto! Sei una persona speciale. 💖";
+        document.getElementById("personalMessage").innerHTML = (messages[name] || "Grazie per tutto! Sei una persona speciale. 💖").replace(/\n/g, "<br>");
 
         document.getElementById("backButton").addEventListener("click", function(event) {
             event.preventDefault();
